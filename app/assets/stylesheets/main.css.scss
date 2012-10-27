@@ -1,0 +1,156 @@
+@import "bootstrap";
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+  background-image: url("grid.jpg");
+}
+
+/* Contact is in application.html */
+.contact{
+  text-align: right;
+  font-family: "museo", georgia, serif;
+}
+
+.container-fluid{
+  padding: 0 2%;
+  margin: 0;
+  background: #e4e4e4;
+  width: 80%;
+  margin: auto;
+  border: 12px solid white;
+  box-shadow: 1px 1px 5px black;
+}
+
+h1 h2 h3 h4{
+  font-family: "museo-slab", georgia, serif;
+}
+
+nav {
+  float: right;
+  ul {
+  list-style:none;
+  }
+  li{
+    display: inline;
+  }
+}
+
+.work-status{
+  text-align: center;
+
+}
+
+.overview {
+  position: relative;
+  img{
+  position: absolute;
+  left: -5%;
+  top: -100%;
+  float: left;
+  width: 20%;
+
+  border: 8px solid white;
+  box-shadow: 0px 1px 9px gray;
+
+  -moz-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-webkit-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-o-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-ms-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+
+
+  }
+  h1{
+    font-family: "museo-slab", georgia, serif;
+    float:left;
+    margin-left: 30%;
+    font-size: 2.5em;
+  }
+  h2{
+    font-family: "museo-slab", georgia, serif;
+
+    margin: 0 0 0 3%;
+    font-size: 1.5em;
+
+  }
+  p{
+    font-family: "museo",serif;
+    padding: 5%;
+    margin-left: 30%;
+  }
+
+}
+
+.merits{
+  font-family: "museo-slab", georgia, serif;
+
+  padding: 1%;
+background: #eeeeee; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* IE10+ */
+background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+}
+
+
+
+section.dynamic-slide{
+  section{
+    display:none;
+  }
+}
+
+
+footer {
+  h1{
+    font-family: "museo-slab", georgia, serif;
+  }
+  h2{
+    font-family: "museo-slab", georgia, serif;
+
+    margin: 0 0 0 3%;
+    font-size: 1.5em;
+
+  }
+  p{
+    font-family: "museo",serif;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+%nav
+  %ul
+    %li= link_to "portfolio", '#portfolio', class: 'dynamic'
+    %li= link_to "blog", "http://dmwoodall.tumblr.com"
+    %li= link_to "resume", '#resume', class: 'dynamic'
+
+.work-status
+  %p= "As of #{Time.current.strftime("%A, %b %e")}"
+  %p I am available for hire!
+
+%section.overview.row-fluid
+  .profile-image=image_tag "me.jpg", id: 'me'
+  %h1 Dave Woodall
+  %h2 Boulder, CO
+
+%section.dynamic-slide
+  %section.resume#resume
+    .row
+      %h1 Education
+      .span3
+        %h2 Starter League
+        %h3 Ruby on Rails Training
+      .span3
+        %h2 University of Denver
+        %h3 Masters of Finance
+      .span3
+        %h2 Liberty University
+        %h3 Communications, Advertising
+    .row
+      %h1 Experience
+      .row
+        .span2
+          logo goes here
+        .span8
+          %h1 AMB3R
+          %h2 CEO & CO-Founder
+
+
+  %section.portfolio#portfolio
+    %h1 This is the portfolio!
+
+%section.work-interests.row-fluid
+  %p.span5 I attended Starter League and now I want to work for you!
+  %ul.span5
+    %li full time
+    %li part time
+
+
+%section.merits.row-fluid
+  .span4
+    %h1 Roles
+    %ul
+      %li Business Owner
+
+  .span4
+    %h1 Awards
+    %ul
+      %li 2011 Small Business of the Year
+
+  .span4
+    %h1 Skills
+    %ul
+      %li 2011 Small Business of the Year
+
+
+%footer.row-fluid
+  .span4
+    %h1 Tweets
+    %ul
+      %li Business Owner
+
+  .span4
+    %h1 Social
+    %ul
+      %li 2011 Small Business of the Year
+
+  .span4
+    %h1 Reading
+    %ul
+      %li 2011 Small Business of the Year
+
