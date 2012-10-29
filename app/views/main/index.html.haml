@@ -120,9 +120,12 @@
     %p I sold my business to dive head-first into the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a company that is actively building Ruby on Rails application(s).
   .span1
   .span3
-    %button.btn-success.btn= mail_to("dave@woodalls.me", "Hire Me!", subject: "Let's talk about some work")
+    -# Removed <button> and added the .btn class to the <a> instead
+    = mail_to "dave@woodalls.me", "Hire Me!", subject: "Let's talk about some work", class: 'btn btn-success hire-me'
 
 %section.merits.row-fluid
+  -# These were in a grid that was different from the section
+  -# below it, which looked weird. They now line up properly.
   .span3#experience
     %h1 Experience
     %ul
@@ -143,7 +146,7 @@
       %li Managed nine graphic artists
       %li Hired ten employees
 
-  .span5.tools
+  .span6.tools
     %h1 Tools
     .row-fluid
       .span7

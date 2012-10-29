@@ -1,11 +1,23 @@
-@import "bootstrap";
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Typefaces */
+/* You had these repeated throughout the stylesheet.
+   Moved them into Sass variables so that it could
+   be better managed */
+$typeface-serif: 'Rokkitt', serif;
+$typeface-sans: 'Titillium Web', sans-serif;
 
+
+html body{
+  /* Render fonts better on Webkit */
+  -webkit-font-smoothing: antialiased !important;
+  /* For IE */
+  padding-left: 0;
+  padding-right: 0;
+}
 
 body{
   background-image: url("grid.jpg");
+  /* Give all page type a little more definition */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 
@@ -19,12 +31,15 @@ body{
     list-style: none;
     display: inline;
   }
-  font-family: 'Titillium Web', sans-serif;
+  font-family: $typeface-sans;
   padding: 1.5% 3%;
   font-size: 1.3em;
   opacity: .7;
   a{
     text-decoration: none;
+    /* The blue stood out weird, let the
+       links inherit <li> color instead */
+    color: inherit;
   }
   &:hover{
     opacity: 1;
@@ -33,7 +48,7 @@ body{
 
 
 p.date{
-  font-family: 'Rokkitt', serif;
+  font-family: $typeface-serif;
   font-size: 1.6em;
   width: 25%;
   margin: 2% auto 1%;
@@ -41,38 +56,40 @@ p.date{
 
 p.status{
   color: red;
-  font-size: 3em;
-  font-family: 'Rokkitt', serif;
+  font-size: 2.2em;
+  font-family: $typeface-serif;
+  /* Let's give the status a bit of emphasis */
+  font-style: italic;
 }
 
 .container-fluid{
-  min-width: 800px;
   padding: 0 2%;
   margin: 0;
   width: 80%;
   margin: auto;
   border: 12px solid white;
-  box-shadow: 1px 1px 5px black;
-  background: #eeeeee; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* IE10+ */
-background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+  /* Soften the shadow, and use a Bourbon
+     mixin so that it adds vendor prefixes */
+  @include box-shadow(1px 1px 5px rgba(0,0,0, 0.25));
 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+  /* This Bourbon mixin will take care of all the vendor
+     prefixes, and automatically adds a fallback of the
+     first color for older browsers */
+  @include linear-gradient(top, #EEEEEE, #CCCCCC);
+
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
 }
 
 h1 {
-  font-family: 'Rokkitt', serif;
+  font-family: $typeface-serif;
 }
 
 nav.links {
   float: right;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: $typeface-sans;
   font-size: 1.3em;
   ul {
   list-style:none;
@@ -105,24 +122,18 @@ nav.links {
 
   border: 8px solid white;
   box-shadow: 0px 1px 9px gray;
-
-  -moz-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
--webkit-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
--o-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
--ms-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-
-
+  /* Moved 5 lines into 1 Bourbon mixin */
+  @include transform( scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) );
   }
   h1{
-    font-family: 'Rokkitt', serif;
+    font-family: $typeface-serif;
     float:left;
     margin-left: 25%;
     font-size: 4em;
     letter-spacing: 1px;
   }
   h2{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: $typeface-sans;
     font-weight: 600;
     float: left;
     font-size: 1.5em;
@@ -132,8 +143,9 @@ transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) sk
 }
 
 .bio.row-fluid{
+  border-bottom: 1px solid #CCC;
   p{
-     font-family: 'Titillium Web', sans-serif;
+     font-family: $typeface-sans;
      font-size: 1.2em;
      line-height: 1.4em;
      margin-left: 40%;
@@ -142,18 +154,18 @@ transform: scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) sk
 }
 
 
-button{
-  a{
-    color: white;
-    font-family: 'Rokkitt', serif;
-    font-size: 2em;
-    text-shadow: 0px 0px 2px black;
-    letter-spacing: 2px;
-    &:hover{
-       text-decoration: none;
-       color: green;
-       text-shadow: none;
-    }
+/* Removed the button, since the Bootstrap .btn class
+   takes care of all that styling. Added a top-left
+   shadow for a letterpress feel. Fixed hover color */
+a.hire-me{
+  color: white;
+  font-family: $typeface-serif;
+  font-size: 2em;
+  text-shadow: -1px -1px 1px rgba(0,0,0, 0.4);
+  letter-spacing: 2px;
+  &:hover{
+     text-decoration: none;
+     color: #F3F3F3;
   }
 }
 
@@ -162,53 +174,61 @@ button{
     margin-bottom: 5%;
 }
 
-
-
-.merits, .next{
-  font-family: 'Titillium Web', sans-serif;
-  border-top: 2px solid #eee;
-    h1{
-      min-width: 200px;
-    }
-    ul{
-    }
-    li{
-      line-height: 1.5em;
-      font-size: 1.2em;
-    }
+.work-interests{
+    font-family: $typeface-sans;
 }
 
+/* Standardized the padding on the .next & .merit
+   <sections> so they properly align to the same grid */
+.merits{
+  /* Altered the border coloring */
+  font-family: $typeface-sans;
+  padding: 1em 0;
+  border-top: 1px solid #F5F5F5;
+  border-bottom: 1px solid #C4C4C4;
+  font-size: 1.1em;
+}
+
+section.next{
+  padding: 1em 0;
+  border-top: 1px solid #EEE;
+}
+
+.tools h2{
+  font-size: 1.2em;
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
 
 /*------Resume-----------*/
 
-
 .res-title{
+  .resume-logo{
+    float: left;
+    margin-top: 25px;
+  }
   h1{
     border-bottom: 2px solid #707070;
     margin-bottom: -5px;
   }
   h2{
-    font-family: 'Rokkitt', serif;
+    font-family: $typeface-serif;
     font-size: 1.5em;
     float: left;
     padding-right: 10px;
     margin-bottom: -20px;
   }
-}
-
-h3{
-  font-size: 1.3em;
-}
-  h3, h4, p {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: normal;
-
-  }
-
-  p{
+  h3{
+    font-family: $typeface-sans;
+    font-weight: 300;
     font-size: 1.2em;
-    line-height: 1.4em;
   }
+  h4{
+    font-family: $typeface-sans;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+}
 
 section.dynamic-slide{
    section{
@@ -217,17 +237,7 @@ section.dynamic-slide{
     margin-bottom: 5%;
   }
 }
- h4{
-  margin-top: -1.2em;
-  font-size: 1.1em;
-  font-style: italic;
-}
 
-.summary{
-  font-family: georgia, serif;
-  font-style: italic;
-  font-size: 1.3em;
-}
 
 /*------ Portfolio -----------*/
 
@@ -244,10 +254,10 @@ section.dynamic-slide{
 }
 footer {
   h1{
-  font-family: 'Rokkitt', serif;
+  font-family: $typeface-serif;
   }
   h2{
-  font-family: 'Rokkitt', serif;
+  font-family: $typeface-serif;
 
     margin: 0 0 0 3%;
     font-size: 1.5em;
@@ -263,7 +273,7 @@ footer {
 .legal{
   text-align: center;
   padding: 1%;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: $typeface-sans;
   font-size: 1.2em;
   font-weight: 300;
   font-style: italic;
@@ -273,7 +283,7 @@ footer {
 Media Queries
 -------------------------------------------*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   body {
     font-size: 100%;
   }
@@ -304,19 +314,20 @@ Media Queries
       font-size: 3em;
     }
     h2{
-      font-family: 'Titillium Web', sans-serif;
+      font-family: $typeface-sans;
       font-weight: 600;
       float: none;
       font-size: 1.5em;
     }
   }
-  .merits.row-fluid {
+
+
+  .bio.row-fluid, .merits.row-fluid, .next.row-fluid{
     .span3, .span4, .span5, .span6 {
     width: 100%;
    }
   }
 }
-
 
 
 
