@@ -5,7 +5,16 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
+
 gem 'haml-rails', '>= 0.3.4', :group => :development
 gem "neat", "~> 0.4.2"
 gem 'bourbon'
