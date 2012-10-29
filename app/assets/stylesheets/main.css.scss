@@ -207,10 +207,6 @@ a.hire-me{
 /*------Resume-----------*/
 
 .res-title{
-  .resume-logo{
-    float: left;
-    margin-top: 25px;
-  }
   h1{
     border-bottom: 2px solid #707070;
     margin-bottom: -5px;
@@ -231,6 +227,7 @@ a.hire-me{
     font-family: $typeface-sans;
     font-weight: 500;
     font-size: 1.2em;
+
   }
 }
 
@@ -242,6 +239,18 @@ section.dynamic-slide{
   }
 }
 
+.education-details, .res-title{
+  h4{
+    font-style: italic;
+    margin-top: -20px;
+  }
+}
+
+.summary{
+  font-style: italic;
+  font-size: 1.3em;
+  font-family: georgia, serif;
+}
 
 /*------ Portfolio -----------*/
 
