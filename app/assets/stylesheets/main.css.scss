@@ -161,31 +161,27 @@ button{
     margin-bottom: 5%;
 }
 
-.work-interests{
-    font-family: 'Titillium Web', sans-serif;
-}
 
-.merits{
+
+.merits, .next{
   font-family: 'Titillium Web', sans-serif;
-  padding: 1%;
   border-top: 2px solid #eee;
-  border-bottom: 2px solid #eee;
-  font-size: 1.1em;
-  }
-
-.tools h2{
-  font-size: 1.2em;
-  margin-bottom: -10px;
-  margin-top: -10px;
+    h1{
+      min-width: 200px;
+    }
+    ul{
+    }
+    li{
+      line-height: 1.5em;
+      font-size: 1.2em;
+    }
 }
+
 
 /*------Resume-----------*/
 
+
 .res-title{
-  .resume-logo{
-    float: left;
-    margin-top: 25px;
-  }
   h1{
     border-bottom: 2px solid #707070;
     margin-bottom: -5px;
@@ -197,17 +193,21 @@ button{
     padding-right: 10px;
     margin-bottom: -20px;
   }
-  h3{
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 300;
-    font-size: 1.2em;
-  }
-  h4{
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
-  }
 }
+
+h3{
+  font-size: 1.3em;
+}
+  h3, h4, p {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+
+  }
+
+  p{
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
 
 section.dynamic-slide{
    section{
@@ -216,7 +216,17 @@ section.dynamic-slide{
     margin-bottom: 5%;
   }
 }
+ h4{
+  margin-top: -1.2em;
+  font-size: 1.1em;
+  font-style: italic;
+}
 
+.summary{
+  font-family: georgia, serif;
+  font-style: italic;
+  font-size: 1.3em;
+}
 
 /*------ Portfolio -----------*/
 
@@ -262,9 +272,10 @@ footer {
 Media Queries
 -------------------------------------------*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
   body {
     font-size: 100%;
+    background: red;
   }
   nav.links{
     display: none;
@@ -299,9 +310,7 @@ Media Queries
       font-size: 1.5em;
     }
   }
-
-
-  .bio.row-fluid, .merits.row-fluid, .next.row-fluid{
+  .merits.row-fluid {
     .span3, .span4, .span5, .span6 {
     width: 100%;
    }
