@@ -171,11 +171,42 @@ button{
   margin-top: -10px;
 }
 
+/*------Resume-----------*/
+
+.res-title{
+  .resume-logo{
+    float: left;
+    margin-top: 25px;
+  }
+  h1{
+    border-bottom: 2px solid #707070;
+    margin-bottom: -5px;
+  }
+  h2{
+    font-family: 'Rokkitt', serif;
+    font-size: 1.5em;
+    float: left;
+    padding-right: 10px;
+    margin-bottom: -20px;
+  }
+  h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+  h4{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+}
 
 section.dynamic-slide{
-  section{
+   section{
     display:none;
     margin-left: 25%;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 5%;
   }
 }
 
@@ -197,14 +228,7 @@ footer {
 
 }
 
-.res-title{
-  h1{
-    color: red;
-  }
-  h2{
-    color: blue;
-  }
-}
+
 
 .legal{
   text-align: center;
