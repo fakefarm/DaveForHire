@@ -1,12 +1,13 @@
-%nav
+%nav.links
   %ul
     %li= link_to "portfolio", '#portfolio', class: 'dynamic'
-    %li= link_to "blog", "http://dmwoodall.tumblr.com"
+    %li|
     %li= link_to "resume", '#resume', class: 'dynamic'
 
+
 .work-status
-  %p= "As of #{Time.current.strftime("%A, %b %e")}"
-  %p I am available for hire!
+  %p.date= "As of #{Time.current.strftime("%A, %b %e")}"
+  %p.status I'm available for hire!
 
 %section.overview.row-fluid
   .profile-image=image_tag "me.jpg", id: 'me'
@@ -15,67 +16,128 @@
 
 %section.dynamic-slide
   %section.resume#resume
-    .row
+    .row.res-title
       %h1 Education
-      .span3
+      .row-fluid
         %h2 Starter League
         %h3 Ruby on Rails Training
-      .span3
+      .row-fluid
         %h2 University of Denver
         %h3 Masters of Finance
-      .span3
+      .row-fluid
         %h2 Liberty University
         %h3 Communications, Advertising
-    .row
+    .row.res-title
       %h1 Experience
-      .row
+      .row-fluid
         .span2
           logo goes here
-        .span8
-          %h1 AMB3R
+        .span10
           %h2 CEO & CO-Founder
+          %h3 AMB3R
+          %h4 April '08 - July '12 (4 years 3 months)
+          %p Summary: Started company with a vision to become the ‘Starbucks of t-shirts’.
+          %p Launched business with an innovative product offering and unique approach to custom apparel. Collaborated with vendors to develop a JIT model that responds to orders based on market trends. As interim COO, developed lean systems in the core business that reduced costs increased speed to market with preemptive customer service.
+      .row-fluid
+        .span2
+          logo goes here
+        .span10
+          %h2 Art Director
+          %h3 Ouray Sportswear
+          %h4 March '09 - October '11 (2 years 7 months)
+          %p Summary: Hired by PE firm to rebuild creative department of distressed company.
+
+          %p Launched business with an innovative product offering and unique approach to custom apparel. Collaborated with vendors to develop a JIT model that responds to orders based on market trends. As interim COO, developed lean systems in the core business that reduced costs increased speed to market with preemptive customer service.
+      .row-fluid
+        .span2
+          logo goes here
+        .span10
+          %h2 Account Executive
+          %h3 FutureShirts
+          %h4 January '05 - March'08 (3 years 3 months)
+          %p Summary: Sell, design, and manage delivery of product to customer.
+
+          %p Company operated as a business within a business. Acquired and managed 60 accounts which grew sales 20%. Responsible to identify new business and manage line plan development. Role required collaborating with freelance design teams and sourcing vendors for accurate, and on-time delivery.
+
+
 
 
   %section.portfolio#portfolio
     %h1 This is the portfolio!
 
-%section.work-interests.row-fluid
-  %p.span5 I attended Starter League and now I want to work for you!
-  %ul.span5
-    %li full time
-    %li part time
+%section.bio.row-fluid
+  .span3
+  .span5
+    %p I sold my business to dive in head-first to the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a startup or similar situation with people who are building with Ruby on Rails and other modern open source langugages.
+  .span1
+  .span3
+    %button Hire me!
 
 
 %section.merits.row-fluid
-  .span4
-    %h1 Roles
+  .span3
+    %h1 Titles
     %ul
-      %li Business Owner
+      %li Business Owner (7 years)
+      %li Art Director (4 years)
+      %li Finance Director (4 years)
+      %li Sales Manager (4 years)
+      %li Graphic Designer (15 years)
+      %li Web Designer (4 years)
+      %li Web Developer (2 years)
 
   .span4
     %h1 Awards
     %ul
       %li 2011 Small Business of the Year
+      %li Master, Finance
+      %li Patent
+      %li Business Exit
+
+  .span5
+    %h1 Tools
+    .row-fluid
+      .span6
+        %h2 Web
+        %ul
+          %li Adobe CS (PS, AI, FW)
+          %li HTML5 / HAML
+          %li CSS3 / SCSS
+          %li JQuery / JavaScript
+          %li Ruby / Rails
+          %li Git / Github
+          %li Herouk
+
+      .span6
+        %h2 Mgmt
+        %ul
+          %li Microsoft Office
+          %li iWork
+          %li Basecamp / Trello
+
+
+%section.next.row-fluid
+  .span4.work-interests
+    %h1 Work interests
+    %ol
+      %li Jr. Rails Dev (back end)
+      %li Web Designer (front end)
+      %li Project Management
+      %li Mail Boy
 
   .span4
-    %h1 Skills
+    %h1 Locations
     %ul
-      %li 2011 Small Business of the Year
-
-
-%footer.row-fluid
-  .span4
-    %h1 Tweets
-    %ul
-      %li Business Owner
+      %li Boulder / Denver
+      %li Atlanta
+      %li Central Florida
+      %li Remote
 
   .span4
-    %h1 Social
+    %h1 Ideal Situation
     %ul
-      %li 2011 Small Business of the Year
-
-  .span4
-    %h1 Reading
-    %ul
-      %li 2011 Small Business of the Year
+      %li Ruby on Rails Shop
+      %li Pair programming
+      %li Small and passionate team
+      %li Environment that encourages learning & growth
 
