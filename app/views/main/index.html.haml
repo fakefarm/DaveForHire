@@ -68,11 +68,10 @@
 %section.bio.row-fluid
   .span3
   .span5
-    %p I sold my business to dive in head-first to the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a startup or similar situation with people who are building with Ruby on Rails and other modern open source langugages.
+    %p I sold my business to dive in head-first to the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a company who is actively building a Ruby on Rails application.
   .span1
   .span3
-    %button Hire me!
-
+    %button.btn-success.btn= mail_to("dave@woodalls.me", "Hire Me!", subject: "Let's talk about some work")
 
 %section.merits.row-fluid
   .span3
@@ -94,13 +93,14 @@
       %li Patent
       %li Business Exit
 
-  .span5
+  .span5.tools
     %h1 Tools
     .row-fluid
       .span6
         %h2 Web
         %ul
-          %li Adobe CS (PS, AI, FW)
+          %li Adobe Creative Suite
+          %li balsamiq
           %li HTML5 / HAML
           %li CSS3 / SCSS
           %li JQuery / JavaScript
@@ -116,16 +116,23 @@
           %li Basecamp / Trello
 
 
+
 %section.next.row-fluid
-  .span4.work-interests
-    %h1 Work interests
+  .span3.work-interests
+    %h1 Interested in
     %ol
       %li Jr. Rails Dev (back end)
       %li Web Designer (front end)
       %li Project Management
-      %li Mail Boy
 
-  .span4
+  .span3.work-interests
+    %h1 Work types
+    %ul
+      %li Full time
+      %li Part time
+      %li Contract
+
+  .span3
     %h1 Locations
     %ul
       %li Boulder / Denver
@@ -133,7 +140,7 @@
       %li Central Florida
       %li Remote
 
-  .span4
+  .span3
     %h1 Ideal Situation
     %ul
       %li Ruby on Rails Shop
