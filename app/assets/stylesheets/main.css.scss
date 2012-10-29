@@ -55,7 +55,7 @@ p.date{
 }
 
 p.status{
-  color: red;
+  color:  #E20D0D;
   font-size: 2.2em;
   font-family: $typeface-serif;
   /* Let's give the status a bit of emphasis */
@@ -128,7 +128,7 @@ nav.links {
   h1{
     font-family: $typeface-serif;
     float:left;
-    margin-left: 25%;
+    margin-left: 19%;
     font-size: 4em;
     letter-spacing: 1px;
   }
@@ -136,21 +136,36 @@ nav.links {
     font-family: $typeface-sans;
     font-weight: 600;
     float: left;
-    font-size: 1.5em;
-    padding: 0.5% 0 0 2%;
+    font-size: 1.4em;
+    padding: 0.7% 0 0 1%;
+    color: gray;
   }
 
 }
 
-.bio.row-fluid{
+.bio{
   border-bottom: 1px solid #CCC;
   p{
      font-family: $typeface-sans;
      font-size: 1.2em;
-     line-height: 1.4em;
      margin-left: 40%;
      width: 75%;
   }
+    .seeking{
+    font-size: 1.3em;
+    margin-left: -60%;
+    p{
+      font-family: $typeface-serif;
+      color: gray;
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.action{
+  text-align: center;
+  padding: 1%;
 }
 
 
@@ -173,6 +188,8 @@ a.hire-me{
     padding: 7% 15%;
     margin-bottom: 5%;
 }
+
+
 
 .work-interests{
     font-family: $typeface-sans;
