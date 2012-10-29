@@ -41,11 +41,12 @@ p.date{
 
 p.status{
   color: red;
-  font-size: 2.2em;
+  font-size: 3em;
   font-family: 'Rokkitt', serif;
 }
 
 .container-fluid{
+  min-width: 800px;
   padding: 0 2%;
   margin: 0;
   width: 80%;
@@ -275,7 +276,6 @@ Media Queries
 @media screen and (max-width: 480px) {
   body {
     font-size: 100%;
-    background: red;
   }
   nav.links{
     display: none;
