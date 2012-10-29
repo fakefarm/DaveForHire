@@ -15,7 +15,7 @@ group :production do
   gem 'thin'
 end
 
-gem 'haml-rails', '>= 0.3.4', :group => :development
+gem 'haml-rails', '>= 0.3.4'
 gem "neat", "~> 0.4.2"
 gem 'bourbon'
 
