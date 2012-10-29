@@ -158,6 +158,7 @@ button{
 
 .btn:first-child{
     padding: 7% 15%;
+    margin-bottom: 5%;
 }
 
 .work-interests{
@@ -261,10 +262,9 @@ footer {
 Media Queries
 -------------------------------------------*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   body {
     font-size: 100%;
-    background: red;
   }
   nav.links{
     display: none;
@@ -275,6 +275,13 @@ Media Queries
   }
   p.status{
     display: none;
+  }
+    .bio.row-fluid{
+    p{
+     margin-left: 0%;
+     width: 100%;
+     float: none;
+    }
   }
   .overview {
     img{
@@ -292,21 +299,14 @@ Media Queries
       font-size: 1.5em;
     }
   }
-  .bio.row-fluid{
-    p{
-     margin-left: 0%;
-     width: 100%;
-     float: none;
-    }
-  }
-  #experience{
-    h1{
-      color: red;
-      float:none;
-    }
+
+
+  .bio.row-fluid, .merits.row-fluid, .next.row-fluid{
+    .span3, .span4, .span5, .span6 {
+    width: 100%;
+   }
   }
 }
-
 
 
 
