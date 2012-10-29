@@ -6,7 +6,7 @@
 
 
 .work-status
-  %p.date= "As of #{Time.current.strftime("%A, %b %e")}"
+  %p.date= "As of #{Time.now.strftime("%A, %l:%M %P")}"
   %p.status I'm available for hire!
 
 %section.overview.row-fluid
@@ -117,15 +117,14 @@
 
 
 %section.bio.row-fluid
-  .span3
-  .span5
-    %p I sold my business to dive in head-first to the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a company who is actively building a Ruby on Rails application.
+  .span6
+    %p I sold my business to dive head-first into the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a company who is actively building Ruby on Rails application(s).
   .span1
   .span3
     %button.btn-success.btn= mail_to("dave@woodalls.me", "Hire Me!", subject: "Let's talk about some work")
 
 %section.merits.row-fluid
-  .span3
+  .span3#experience
     %h1 Experience
     %ul
       %li Business Owner (7 years)
