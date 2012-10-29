@@ -1,6 +1,8 @@
 DaveForHire::Application.routes.draw do
   root :to => 'main#index'
 
+  match '/portfolio' => 'main#portfolio', as: :portfolio
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
