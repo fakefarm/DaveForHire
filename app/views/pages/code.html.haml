@@ -1,0 +1,48 @@
+%section.work
+  %section.left-column
+    %section.art.about
+      %h1 Code
+      = link_to image_tag('github.png'), 'http://www.github.com/davewoodall', target: '_blank', class: 'github-icon'
+      %p Have you ever thought of code as a foreign language? Once I saw it from that perspective, I didn’t want to be bound to a translator.
+
+    %section.showcase.art-portfolio
+      %section.aspect-row
+        %h2 Eye Candy
+        %p I love the brain-storm, wireframe, mockup, markup process.
+        %ul
+          %li= image_tag 'ai.png'
+          %li= image_tag 'ps.jpg'
+          %li= image_tag 'fw.jpg'
+          %li= image_tag 'HTML.png'
+          %li= image_tag 'css3.jpg'
+          %li= image_tag 'jquery-logo.jpg'
+
+      %section.aspect-row
+        %h2 Transactions
+        %p Now the fun really begins! Making it all real, validated by transactions!
+        %ul
+          %li= image_tag 'ruby.png'
+          %li= image_tag 'RoR.png'
+          %li= image_tag 'github-logo.png'
+          %li= image_tag 'heroku.png'
+
+  %section.sidebar
+    .merits
+      %h1 Skills
+      %ul
+        %li Wire Framing: AI, PSD, FW
+        %li Markup: HTML, HAML
+        %li Styling: CSS, SCSS
+        %li Behavior: JQuery
+        %li Scripting: Ruby, UNIX
+        %li Frameworks: Ruby on Rails, Bootstrap
+
+    .action-button
+      %ul
+        %li Hire me!
+        %ul.drawer
+          %li= mail_to("dave@hireDave.me", "email", subject: "Let's talk about some work!")
+          %li= render 'shared/mention'
+
+%footer
+  = render 'shared/nav_social'

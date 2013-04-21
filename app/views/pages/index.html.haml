@@ -1,0 +1,15 @@
+.index-page
+  .bg=image_tag "home_page_image.jpg"
+
+  %section.intro
+    %p Thanks for stopping by! I’m an artist, turned entrepreneur, turned developer. I can help you out in a lot of different ways. Hit me up and let’s talk!
+    .sig=image_tag "signature.png"
+
+  .action-button
+    %ul
+      %li Hire me!
+      %ul.drawer
+        %li= mail_to("dave@hireDave.me", "email", subject: "Let's talk about some work!")
+        %li= render 'shared/mention'
+
+

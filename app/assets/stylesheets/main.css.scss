@@ -1,0 +1,780 @@
+/* Typefaces */
+/* You had these repeated throughout the stylesheet.
+   Moved them into Sass variables so that it could
+   be better managed */
+$typeface-serif: 'Rokkitt', serif;
+$typeface-sans: 'Titillium Web', sans-serif;
+
+
+html body{
+  /* Render fonts better on Webkit */
+  -webkit-font-smoothing: antialiased !important;
+  /* For IE */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body{
+  /* Give all page type a little more definition */
+  // text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+body{
+background: url('worn_dots.jpg');
+}
+
+a{
+  color: white;
+  &:hover{
+    text-decoration: none;
+    color: rgba(255, 226, 64, .8);
+  }
+}
+
+/* _nav bar
+------------------------------------------*/
+
+nav.social, nav.main{
+  position: relative;
+  z-index: 3;
+  background-color:rgba(0,0,0,0.7);
+  overflow: auto;
+  h1{
+    font-size: 1.4em;
+    float: left;
+    padding: 0 0 0 7px;
+    margin: 0;
+    font-family: $typeface-sans;
+    font-weight: 100;
+  }
+  ul{
+    list-style: none;
+    float: right;
+    text-align: right;
+  }
+  li{
+    display: inline-block;
+  }
+}
+
+.phone{
+  color: white;
+}
+
+nav.social{
+  font-family: $typeface-sans;
+  margin: -25px 0 0 0;
+  ul{
+    margin: 12px 6px 0 0;
+  }
+  li{
+    font-size: 1.25em;
+    opacity: .8;
+  }
+  a{
+    display: inline-block;
+    margin: 0 5px;
+  }
+  img{
+    width: 20px;
+    opacity: .3;
+    &:hover{
+      -moz-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      -webkit-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      -o-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      -ms-transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      transform: scale(1.5) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    }
+  }
+}
+
+
+div .logo {
+  float: left;
+  padding: 11px;
+  width: 15%;
+  a img{
+   width: 100%;
+   &:hover{
+    -moz-transform: scale(1.05) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -webkit-transform: scale(1.05) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1.05) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1.05) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    transform: scale(1.05) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+   }
+  }
+}
+
+nav.main{
+  background-color:rgba(0,0,0,0.5);
+  padding: 1% 0 0% 0;
+
+  li{
+  margin: 0 10px;
+  }
+  a{
+    font-size: 3em;
+    font-family: $typeface-serif;
+    color: black;
+    opacity: .5;
+    &:hover {
+      color: white;
+      opacity: .9;
+    }
+  }
+}
+
+footer{
+  margin: 3% 0 0 0;
+}
+
+/* _index page
+------------------------------------------*/
+
+.index-page{
+  margin: -20% 0 0 0;
+  z-index: -5;
+  border-radius: 3px;
+}
+
+.index-page .bg img {
+  // border: 13px solid white;
+  box-shadow: 1px 1px 4px gray;
+}
+
+section.intro{
+
+  position: relative;
+  z-index: 2;
+  width: 35%;
+  font-size: 1.3em;
+  line-height: 150%;
+  margin: -47% 0 0 52%;
+  font-family: $typeface-sans;
+}
+
+.sig{
+  width: 100%;
+}
+
+.sig img{
+  position: relative;
+  z-index: -1;
+  width: 50%;
+  margin: 0 0 0 50%;
+}
+
+.action-button{
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0 75%;
+  background-color:rgba(255,0,0,0.65);
+  cursor: pointer;
+}
+
+.action-button ul{
+  padding: 5% 0;
+  list-style: none;
+}
+
+.action-button li{
+  color: white;
+  font-family: $typeface-serif;
+  font-size: 2em;
+}
+
+ul.drawer{
+  display: none;
+}
+
+.drawer li a{
+  display: inline-block;
+  margin: 3% 0;
+  color: yellow;
+}
+
+
+// Secondary pages
+
+section.work{
+  background: #eef1f8;
+  box-shadow: 1px 3px 4px rgba(0,0,0,.1);
+  width: 100%;
+  overflow: auto;
+  margin-top: 0;
+}
+
+section.about{
+  margin: 3% 0 0 0;
+  h1{
+    font-size: 8.5em;
+    float: left;
+    width: 21%;
+    margin-right: 1%;
+    height: 46px;
+    padding-top: 22px;
+    }
+    img{
+      float: left;
+      margin: 0 10px 0 20px;
+      opacity: .5;
+      padding-top: 22px;
+    }
+    p{
+      line-height: 30px;
+      font-size: 1.3em;
+      font-family: $typeface-sans;
+    }
+}
+
+section.about-tshirts{
+  padding: 0 0 0 50px;
+  h1.head{
+    font-size: 5em;
+    margin: 2% 0 5% 0;
+    height: 46px;
+    padding-top: 22px;
+    }
+    p.shirt{
+     background: white;
+     opacity: .8;
+     margin: 0 0 1% 0;
+     padding: 10px;
+     line-height: 30px;
+     font-size: 1.25em;
+     font-family: $typeface-sans;
+    }
+}
+
+a.linkedin-icon img{
+  margin: 0 10px 0 275px;
+}
+
+a.github-icon img{
+  margin: 0 10px 0 100px;
+}
+
+
+section.left-column{
+  @include span-columns(8);
+  margin-top: 0px;
+}
+
+section.aspect{
+  overflow: auto;
+  h2{
+    font-family: $typeface-sans;
+    border-bottom: 1px solid #aaa;
+  }
+  li{
+    padding: 1%;
+    width: 50%;
+  }
+  img{
+    box-shadow: 1px 1px 3px #aaa;
+    width: 100%
+  }
+}
+
+section.aspect-hero{
+  overflow: auto;
+  h2{
+    font-family: $typeface-sans;
+    border-bottom: 1px solid #aaa;
+  }
+  li{
+    padding: 1%;
+    width: 100%;
+  }
+  img{
+    box-shadow: 1px 1px 3px #aaa;
+    border: 10px solid white;
+    width: 100%
+  }
+}
+
+section.aspect-row{
+  overflow: auto;
+  h2{
+    font-family: $typeface-sans;
+    border-bottom: 1px solid #aaa;
+  }
+  li{
+    padding: 1%;
+    width: 32%;
+  }
+  img{
+    box-shadow: 1px 1px 3px #aaa;
+    border: 10px solid white;
+    width: 100%
+  }
+}
+
+
+section.sidebar{
+  @include span-columns(4);
+  background: rgba(255, 226, 64, .8);
+  padding-top: 17px;
+
+  .action-button{
+    margin: 0;
+  }
+}
+
+.merits{
+  opacity: .8;
+  padding: 0 24px;
+  ul{
+    margin: 0 0 0 5px;
+    list-style: none;
+  }
+  li{
+    font-family: $typeface-sans;
+    font-size: 1.3em;
+    margin: 10px;
+  }
+}
+
+section.showcase{
+  h2{
+    margin: 10% 0 0 0;
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    float: left;
+  }
+  img{
+  }
+  p{
+    background: white;
+    opacity: .8;
+    margin: 0 0 1% 0;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 1.25em;
+    font-family: $typeface-sans;
+  }
+}
+
+
+// ------------------ Shirt page
+
+.shirt-info{
+  overflow: auto;
+}
+
+.hero-image{
+  width: 40%;
+  margin: 0 2% 0 2%;
+}
+
+.perfect-shirt{
+  overflow: auto;
+
+  .hero-image{
+      float: left;
+    }
+  h1{
+    float: right;
+  }
+  p{
+    float: right;
+    width: 55%;
+  }
+}
+
+.shirt-costs{
+  overflow: auto;
+
+  .hero-image{
+      float: right;
+    }
+  h1{
+    float: left;
+  }
+  p{
+    float: left;
+    width: 55%;
+  }
+}
+
+
+.my-job-as-tshirts{
+  ul{
+    width: 29%;
+    float:left;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Contact is in application.html */
+.contact{
+  ul{
+    text-align: right;
+  }
+  li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+  }
+  font-family: $typeface-sans;
+  padding: 1.5% 3%;
+  font-size: 1.3em;
+  opacity: .7;
+  a{
+    text-decoration: none;
+    /* The blue stood out weird, let the
+       links inherit <li> color instead */
+    color: inherit;
+  }
+  &:hover{
+    opacity: 1;
+  }
+}
+
+
+p.date{
+  font-family: $typeface-serif;
+  font-size: 1.6em;
+  width: 30%;
+  margin: 2% auto 1%;
+}
+
+p.status{
+  color:  #E20D0D;
+  font-size: 2.2em;
+  font-family: $typeface-serif;
+  /* Let's give the status a bit of emphasis */
+  font-style: italic;
+}
+
+.container-fluid{
+  padding: 2%;
+  max-width: 1200px;
+  min-width: 745px;
+  width: 100%;
+  margin: 0;
+  margin: auto;
+//   border: 12px solid white;
+//   /* Soften the shadow, and use a Bourbon
+//      mixin so that it adds vendor prefixes */
+//   @include box-shadow(1px 1px 5px rgba(0,0,0, 0.25));
+
+//   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+//   /* This Bourbon mixin will take care of all the vendor
+//      prefixes, and automatically adds a fallback of the
+//      first color for older browsers */
+//   @include linear-gradient(top, #EEEEEE, #CCCCCC);
+
+//   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+}
+
+h1 {
+  font-family: $typeface-serif;
+}
+
+nav.links {
+  float: right;
+  font-family: $typeface-sans;
+  font-size: 1.3em;
+  ul {
+  list-style:none;
+  margin-top: 15px;
+  }
+  li{
+    display: inline;
+    color: #707070;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+.work-status{
+  text-align: center;
+
+}
+
+
+.overview {
+  position: relative;
+  img{
+  position: absolute;
+  left: -5%;
+  max-width: 200px;
+  top: -70%;
+  float: left;
+  width: 20%;
+
+  border: 8px solid white;
+  box-shadow: 0px 1px 9px gray;
+  /* Moved 5 lines into 1 Bourbon mixin */
+  @include transform( scale(1) rotate(-4deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) );
+  }
+  h1{
+    font-family: $typeface-serif;
+    float:left;
+    margin-left: 19%;
+    font-size: 4em;
+    letter-spacing: 1px;
+  }
+  h2{
+    font-family: $typeface-sans;
+    font-weight: 600;
+    float: left;
+    font-size: 1.4em;
+    padding: 0.7% 0 0 1%;
+    color: gray;
+  }
+  h3{
+    font-family: $typeface-sans;
+    clear: left;
+    margin: -10px 0 0 195px;
+  }
+
+}
+
+.bio{
+  border-bottom: 1px solid #CCC;
+  p{
+     font-family: $typeface-sans;
+     font-size: 1.2em;
+     margin-left: 40%;
+     width: 75%;
+  }
+    .seeking{
+    font-size: 1.3em;
+    margin-left: -60%;
+    p{
+      font-family: $typeface-serif;
+      color: gray;
+      font-style: italic;
+      margin-bottom: 5px;
+      margin-left: 50%;
+    }
+  }
+}
+
+.action{
+  text-align: center;
+  padding: 1%;
+}
+
+
+/* Removed the button, since the Bootstrap .btn class
+   takes care of all that styling. Added a top-left
+   shadow for a letterpress feel. Fixed hover color */
+a.hire-me{
+  color: white;
+  font-family: $typeface-serif;
+  font-size: 2em;
+  text-shadow: -1px -1px 1px rgba(0,0,0, 0.4);
+  letter-spacing: 2px;
+  &:hover{
+     text-decoration: none;
+     color: #F3F3F3;
+  }
+}
+
+.btn:first-child{
+    padding: 7% 15%;
+    margin-bottom: 5%;
+}
+
+
+
+.work-interests{
+    font-family: $typeface-sans;
+}
+
+/* Standardized the padding on the .next & .merit
+   <sections> so they properly align to the same grid */
+// .merits {
+//   /* Altered the border coloring */
+//   font-family: $typeface-sans;
+//   padding: 1em 0;
+//   border-bottom: 1px solid #C4C4C4;
+//   font-size: 1.2em;
+// }
+
+
+.next{
+  font-family: $typeface-sans;
+  font-size: 1.2em;
+  padding: 1em 0;
+  border-top: 1px solid #EEE;
+}
+
+.tools h2{
+  font-family: $typeface-sans;
+  font-size: 1.2em;
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+/*------Resume-----------*/
+
+.res-title{
+  h1{
+    border-bottom: 2px solid #707070;
+    margin-bottom: -5px;
+  }
+  h2{
+    font-family: $typeface-serif;
+    font-size: 1.5em;
+    float: left;
+    padding-right: 10px;
+    margin-bottom: -20px;
+  }
+  h3{
+    font-family: $typeface-sans;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+  h4{
+    font-family: $typeface-sans;
+    font-weight: 500;
+    font-size: 1.2em;
+
+  }
+}
+
+section.dynamic-slide{
+   section{
+    display:none;
+    margin-left: 25%;
+    margin-bottom: 5%;
+  }
+}
+
+.education-details, .res-title{
+  h4{
+    font-style: italic;
+    margin-top: -20px;
+  }
+}
+
+.summary{
+  font-style: italic;
+  font-size: 1.3em;
+  font-family: georgia, serif;
+}
+
+/*------ Portfolio -----------*/
+
+.websites{
+  h1{
+    border-bottom: 2px solid #707070;
+    margin-bottom: -5px;
+  }
+  border: 8px solid white;
+  box-shadow: 0px 1px 5px gray;
+  width: 95%;
+  margin: 3% 0 ;
+
+}
+footer {
+  h1{
+  font-family: $typeface-serif;
+  }
+  h2{
+  font-family: $typeface-serif;
+
+    margin: 0 0 0 3%;
+    font-size: 1.5em;
+
+  }
+  p{
+    font-family: "museo",serif;
+  }
+
+}
+
+
+.legal{
+  text-align: center;
+  padding: 1%;
+  font-family: $typeface-sans;
+  font-size: 1.2em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/*-----------------------------------------
+Media Queries
+-------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 100%;
+  }
+  nav.links{
+    display: none;
+
+  }
+  p.date{
+    display: none;
+  }
+  p.status{
+    display: none;
+  }
+    .bio.row-fluid{
+    p{
+     margin-left: 0%;
+     width: 100%;
+     float: none;
+    }
+  }
+  .overview {
+    img{
+    display: none;
+    }
+    h1{
+      margin-left: 0%;
+      float:none;
+      font-size: 3em;
+    }
+    h2{
+      font-family: $typeface-sans;
+      font-weight: 600;
+      float: none;
+      font-size: 1.5em;
+    }
+  }
+
+
+  .bio.row-fluid, .merits.row-fluid, .next.row-fluid{
+    .span3, .span4, .span5, .span6 {
+    width: 100%;
+   }
+  }
+
+  .seeking p{
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

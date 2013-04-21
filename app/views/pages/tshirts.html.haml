@@ -1,0 +1,60 @@
+%section.work
+  %section.left-column
+    %section.about-tshirts
+      %h1.head Need Tshirts?
+      %p.shirt I have been designing & printing shirts for 17 years. My goal is to make the perfect tshirt for you so that it becomes the favorite in your customer’s closet.
+      %section.showcase.shirt-summary
+
+        %section.shirt-info.perfect-shirt
+          .hero-image= image_tag 'perfectShirt.png'
+          %h2 The Perfect Tshirt
+          %p The perfect tshirt is a combination of product, process and art.
+
+
+        %section.shirt-info.shirt-costs
+          .hero-image= image_tag 'projectDetails.png'
+          %h2 How much do tshirts cost?
+          %p Making the perfect shirt requires paying attention to how it looks, fits, and feels. I've found the process works much smoother when you set the budget, in-hand date, and quantity. Then, I'll take care of the fit, feel, and look.
+
+        %section.shirt-info.my-job-as-tshirts
+          %h2 Think of me as your personal Fashion Designer
+          %p I'll make sure you create the coolest t-shirt within your deadline and budget.
+
+          %ul.shirt-part
+            %li= image_tag 'shirt.png'
+            %li Vneck, crew neck, tank top? Tell me what kind of shirt you want and I'll find it for you.
+          %ul.shirt-part
+            %li= image_tag 'ink.png'
+            %li Did you know there is more than one type of ink? Oh yeah, there's plastisol, water-base, and discharge, to name a few.
+          %ul.shirt-part
+            %li= image_tag 'art.png'
+            %li I can handle art, or advise the artist on best ways to design for your budget.
+
+        %section.shirt-info.my-job-as-artist
+          %h2 How I Design
+          %p 1. Get an idea of what you like.
+          %p 2. Sketch a concept for your approval.
+          %p 3. Design final art.
+          %p Art Rate: $75 an hr. / Average design cost: $200
+
+        %section.shirt-info.my-job-as-artist
+          %h2 Ready?
+          %p Fill out a form and we're in motion!
+          = render 'shared/wufoo'
+
+  %section.sidebar
+    .action-button
+      %ul
+        %li= link_to "Tshirt trends", "http://pinterest.com/hireDave/pins/"
+
+    .action-button
+      %ul
+        %li Let's print a Tshirt!
+        %ul.drawer
+          %li= render 'shared/wufoo'
+
+
+
+
+%footer
+  = render 'shared/nav_social'

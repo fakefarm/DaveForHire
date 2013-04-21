@@ -1,0 +1,53 @@
+%section.work
+  %section.left-column
+    %section.art.about
+      %h1 Art
+      = link_to image_tag('dribbble.png'), 'http://www.dribbble.com/davewoodall', target: '_blank'
+      %p I’ve worked as graphic designer, web designer, art director, and application UI architect. My favorite projects are those where I can collaborate with other artists.
+
+    %section.showcase.art-portfolio
+      %section.aspect
+        %h2 Web Design
+        %ul
+          %li= image_tag 'codejournal.jpg'
+          %li= image_tag 'catmath.jpg'
+          %li= image_tag 'logan.jpg'
+          %li= image_tag 'oem.jpg'
+          %li= image_tag 'weston.jpg'
+
+      %section.aspect
+        %h2 Logo Design
+        %ul
+          %li= image_tag 'bird.jpg'
+          %li= image_tag 'cats.jpg'
+          %li= image_tag 'inculcate.jpg'
+          %li= image_tag 'ruby.jpg'
+
+      %section.aspect
+        %h2 Product Line Design
+        %ul
+          %li= image_tag 'crocs.jpg'
+          %li= image_tag 'johnny.jpg'
+          %li= image_tag 'mtn.jpg'
+          %li= image_tag 'sales.jpg'
+
+  %section.sidebar
+    .merits
+      %h1 Skills
+      %ul
+        %li Art Direction
+        %li Project Planning
+        %li Web Design
+        %li UX/UI Wire-Framing
+        %li Graphic Design
+        %li Logo Design
+
+    .action-button
+      %ul
+        %li Hire me!
+        %ul.drawer
+          %li= mail_to("dave@hireDave.me", "email", subject: "Let's talk about some work!")
+          %li= render 'shared/mention'
+
+%footer
+  = render 'shared/nav_social'

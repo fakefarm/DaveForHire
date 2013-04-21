@@ -1,0 +1,224 @@
+%nav.links
+  %ul
+    %li= link_to "portfolio", '#portfolio', class: 'dynamic'
+    %li|
+    %li= link_to "resume", '#resume', class: 'dynamic'
+
+
+.work-status
+  %p.date= "As of #{Time.now.strftime("%A, %B %e")}"
+  %p.status I'm available for Full Time.
+
+%section.overview.row-fluid
+  .profile-image=image_tag "me.jpg", id: 'me'
+  %h1 Dave Woodall
+  %h2 Boulder, CO
+  %h3 Ruby on Rails Developer.
+
+%section.dynamic-slide
+  %section.resume#resume
+    .row.res-title
+      %h1 Education
+      .row-fluid
+        .span11.education-details
+          %h2 Starter League (Chicago, IL)
+          %h3 Ruby on Rails Training
+          %h4 Completed June, 2012
+      .row-fluid
+        .span11.education-details
+          %h2 University of Denver
+          %h3 Masters of Finance
+          %h4 Graduated June, 2011
+      .row-fluid
+        .span11.education-details
+          %h2 Liberty University (Lynchburg, VA)
+          %h3 Communications, Advertising
+          %h4 Graduated December, 2000
+
+    .row.res-title
+      %h1 Experience
+
+      .row-fluid
+        .span11
+          %h2 Ruby on Rails Developer
+          %h3 Factory Code Labs
+          %h4 November '12 - March '13
+          %p.summary Summary: Jr. Ruby on Rails Developer
+          %p Full time Ruby on Rails developer.
+
+      .row-fluid
+        .span11
+          %h2 Unofficial Intern
+          %h3 Pivotal Labs
+          %h4 September '12 - November '12 (3 months)
+          %p.summary Summary: Ruby on Rails immersion.
+          %p Spent 12 hours a day learning to code surrounded by some of the smartest developers on the planet.
+      .row-fluid
+        .span11
+          %h2 CEO & CO-Founder
+          %h3 AMB3R, LLC
+          %h4 April '08 - July '12 (4 years 3 months) - <span style="color:red">SOLD!</span>
+          %p.summary Summary: Started company with a vision to become the ‘Starbucks of t-shirts’.
+          %p Launched business with an innovative product offering and unique approach to custom apparel. Collaborated with vendors to develop a JIT model that responds to orders based on market trends. As interim COO, developed lean systems in the core business that reduced costs increased speed to market with preemptive customer service.
+      .row-fluid
+        .span11
+          %h2 Art Director
+          %h3 Ouray Sportswear
+          %h4 March '09 - October '11 (2 years 7 months)
+          %p.summary Summary: Hired by PE firm to rebuild creative department of distressed company.
+
+          %p Part of new management team to turnaround bankrupt company and win South Denver’s 2011 Small Business of the Year award. Applied an analytical approach to the creative process which included ongoing trend and market analysis. Developed lean systems for the creative team to meet aggressive deadlines which lead to a company wide adoption of my techniques. Credited with improvements that increased revenues 14%.
+
+      .row-fluid
+        .span11
+          %h2 Account Executive
+          %h3 Futureshirts
+          %h4 January '05 - March'08 (3 years 3 months)
+          %p.summary Summary: Sell, design, and manage delivery of product to customer.
+
+          %p Company operated as a business within a business. Acquired and managed 60 accounts which grew sales 20%. Responsible to identify new business and manage line plan development. Role required collaborating with freelance design teams and sourcing vendors for accurate, and on-time delivery.
+      .row-fluid
+        .span11
+          %h2 Founder
+          %h3 Church Clothes
+          %h4 October '00 - December'06 (6 years 3 months)
+          %p Initiated and managed all brand activities including creative marketing, multi-channel sales, visual design, merchandising, vendor sourcing, production management, and distribution logistics.
+
+
+
+
+  %section.portfolio#portfolio
+    %h1 Websites
+    .row-fluid
+      .span4
+        .websites=image_tag "codejournal.jpg"
+      .span4
+        .websites=image_tag "catmath.jpg"
+      .span4
+        .websites=image_tag "paperwhite.jpg"
+    .row-fluid
+      .span4
+        .websites=image_tag "weston.jpg"
+      .span4
+        .websites=image_tag "oem.jpg"
+      .span4
+        .websites=image_tag "amb3r.jpg"
+    .row-fluid
+      .span4
+        .websites=image_tag "deb.jpg"
+      .span4
+        .websites=image_tag "logan.jpg"
+
+
+    %h1 Logos
+    .row-fluid
+      .span4
+        .websites=image_tag "bird.jpg"
+      .span4
+        .websites=image_tag "inculcate.jpg"
+      .span4
+        .websites=image_tag "ruby.jpg"
+    .row-fluid
+      .span4
+        .websites=image_tag "edx.jpg"
+      .span4
+        .websites=image_tag "dave.jpg"
+      .span4
+        .websites=image_tag "cats.jpg"
+
+    %h1 Product Lines
+    .row-fluid
+      .span4
+        .websites=image_tag "crocs.jpg"
+      .span4
+        .websites=image_tag "johnny.jpg"
+      .span4
+        .websites=image_tag "mtn.jpg"
+
+    %h1 My Patent
+    .row-fluid
+      .span4
+        .websites=image_tag "shirt.jpg"
+      .span4
+        .websites=image_tag "kids.jpg"
+      .span4
+        .websites=image_tag "sales.jpg"
+
+%section.bio.row-fluid
+  .span6
+    %p I sold my company to dive head-first into the world wide web. My broad background means I can contribute to a team in a lot of ways. Ideally I'm looking to join a company that is actively building Ruby on Rails application(s).
+  .span1
+  .span4.action
+    -# Removed <button> and added the .btn class to the <a> instead
+    = mail_to "dave@hireDave.me", "Hire Me!", subject: "Let's talk about some work", class: 'btn btn-success hire-me'
+
+%section.merits.row-fluid
+  -# These were in a grid that was different from the section
+  -# below it, which looked weird. They now line up properly.
+  .span3#experience
+    %h1 Experience
+    %ul
+      %li Ruby on Rails Developer
+      %li Graphic / Web Designer
+      %li Business Owner
+      %li Art Director
+      %li Finance Director
+      %li Sales Manager
+
+  .span3
+    %h1 Highlights
+    %ul
+      %li Winner small business of the year '11
+      %li Successful business exit
+      %li Masters, Finance
+      %li Patent owner
+      %li Managed nine graphic artists
+      %li Hired ten employees
+
+  .span6.tools
+    %h1 Tools
+    .row-fluid
+      .span7
+        %ul
+          %li Adobe Creative Suite
+          %li balsamiq
+          %li HTML5 / HAML
+          %li CSS3 / SCSS
+          %li Ruby / Rails
+          %li Cucumber / RSpec
+
+      .span5
+        %ul
+          %li Git / Github
+          %li Heroku
+          %li Microsoft Office
+          %li iWork
+          %li Basecamp / Trello
+          %li Quickbooks
+
+%section.next.row-fluid
+  .span3.work-interests
+    %h1 Interested in
+    %ul
+      %li Ruby on Rails Position
+
+  .span3.work-interests
+    %h1 Work types
+    %ul
+      %li Full time
+      %li Part time
+      %li Contract
+
+  .span3
+    %h1 Locations
+    %ul
+      %li Boulder / Denver
+      %li Atlanta
+      %li Florida
+
+  .span3
+    %h1 Ideal situation
+    %ul
+      %li Pair programming
+      %li Small and passionate team
+      %li Learning environment

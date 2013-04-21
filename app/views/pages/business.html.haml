@@ -1,0 +1,63 @@
+%section.work
+  %section.left-column
+    %section.art.about
+      %h1 Business
+      = link_to image_tag('linkedin.png'), 'http://www.linkedin.com/in/davewoodall', target: '_blank', class: 'linkedin-icon'
+      %p Business is a collection of hypotheses to systematically test. The proof is in the profit!
+
+    %section.showcase.art-portfolio
+
+      %section.aspect-hero
+        %h2 The Black Box
+        %p The goal of business is to grow and sustain itself with self-generated profits. I like to think of it as a black box where we insert $1 and it spits out $10.
+        %ul
+          %li= image_tag 'black_box.jpg'
+
+      %section.aspect-hero
+        %h2 Strategy
+        %p I love getting on the chalk board and figuring out how to buy low and sell high. The strategy of taking a natural resource and adding value that customers gladly pay for.
+        %ul
+          %li= image_tag 'strategy.jpg'
+
+      %section.aspect-hero
+        %h2 Operations
+        %p Now the fun part. Once we have a business model, I like to focus on how to compete and do it better, faster, and cheaper than the competitors.
+        %ul
+          %li= image_tag 'operations.jpg'
+
+      %section.aspect
+        %h2 Marketing
+        %p I'm a fan of packaging concepts and services in a way that makes it easy for customers to make buying decisions.  I developed a menu of services for customers to know the difference between t-shirt inks, and design services.
+        %ul
+          %li= image_tag 'Blast.gif'
+          %li= image_tag 'IL.gif'
+          %li= image_tag 'foil.gif'
+          %li= image_tag 'SSP.gif'
+
+      %section.aspect
+        %h2 Innovation
+        %p Daily off-sites are some of my most favorite activities. Getting people in a room to create something new and exciting. Ouray Sportswear need to grow their 'two-tshirt' sales combo. In the process I created the 'flipface', and subsequently received a patent for the idea.
+        %ul
+          %li= image_tag 'kids.jpg'
+          %li= image_tag 'shirt.jpg'
+
+
+
+  %section.sidebar
+    .merits
+      %h1 Skills
+      %ul
+        %li Customer Development
+        %li Sales
+        %li Analytical Marketing
+        %li Team Management
+        %li Corporate Strategy
+        %li Finance & Accounting
+
+    .action-button
+      %ul
+        %li Hire me!
+        %ul.drawer
+          %li= mail_to("dave@hireDave.me", "email", subject: "Let's talk about some work!")
+          %li= render 'shared/mention'
+
