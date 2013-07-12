@@ -205,6 +205,7 @@ section.work{
 }
 
 section.about{
+  @include row();
   margin: 3% 0 0 0;
   h1{
     font-size: 8.5em;
@@ -298,6 +299,9 @@ section.aspect-row{
   h2{
     font-family: $typeface-sans;
     border-bottom: 1px solid #aaa;
+  }
+  ul{
+    @include row();
   }
   li{
     padding: 1%;

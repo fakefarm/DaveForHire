@@ -8,9 +8,12 @@ DaveForHire::Application.routes.draw do
 
   match '/tshirts' => "pages#tshirts"
 
+
   root :to => 'pages#index'
 
   match '/portfolio' => 'main#portfolio', as: :portfolio
+
+  resources :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

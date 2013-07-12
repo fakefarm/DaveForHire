@@ -1,0 +1,10 @@
+%section.work
+  %section.left-column
+    %h1 A blog
+
+    - @post.each do |post|
+      %p= post.title
+
+
+%footer
+  = render 'shared/nav_social'

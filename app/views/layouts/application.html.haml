@@ -9,25 +9,7 @@
     = csrf_meta_tags
 
   %body
-  %section.contact
-    %ul
-      %li= link_to "github", "https://github.com/woodall", :target => "_blank"
-      %li|
-      %li= mail_to("dave@hireDave.me", "email", subject: "Let's talk about some work!")
-      %li|
-      %li= link_to "twitter", "http://www.twitter.com/hire_dave", :target => "_blank"
-      %li|
-      %li= link_to "dribbble", "http://www.dribbble.com/davewoodall", :target => "_blank"
-      %li|
-      -# tel: links work on phones so they can touch & call
-      %li= link_to '303 416 7032', 'tel:3034167032'
-
-
-
   .container-fluid
+    = render 'shared/nav_social'
+    = render 'shared/nav_main'
     = yield
-
-  .legal
-    %p I built this page with Photoshop, HAML, SCSS, JQuery, Ruby on Rails, and Love.
-    =link_to "View the source code on github.", "https://github.com/DMWoodall/DaveForHire"
-
