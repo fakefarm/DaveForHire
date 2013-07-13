@@ -105,9 +105,16 @@
   }
   @include row();
   .link-section{
-    @include span-columns(4);
+    @include span-columns(3);
   }
 }
 
 
 
+.web-camp{
+  .full-row{
+    img{
+      @include span-columns(11.5);
+    }
+  }
+}
