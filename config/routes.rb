@@ -1,5 +1,10 @@
 DaveForHire::Application.routes.draw do
 
+  root :to => 'pages#index'
+  match '/experience' => 'pages#experience'
+  match '/services' => 'pages#services'
+  match '/is-this-you' => 'pages#is_this_you'
+
   match '/art' => "pages#art"
 
   match '/business' => "pages#business"
@@ -8,8 +13,6 @@ DaveForHire::Application.routes.draw do
 
   match '/tshirts' => "pages#tshirts"
 
-
-  root :to => 'pages#index'
 
   match '/portfolio' => 'main#portfolio', as: :portfolio
 
