@@ -29,6 +29,11 @@
         %ul
           %li
             %a{ href: "#web-apps"} Web Apps
+      .link-section
+        %h2 Instructor
+        %ul
+          %li
+            %a{ href: "#web-camp"} Boulder Web Camp
 
     .art
       %h2 Design
@@ -80,26 +85,48 @@
 
     .code
       %h2 Code
-      .grid-small
+      .grid-row
         %h3#web-apps Web apps
         =link_to "top", "#"
-        =image_tag 'RoR.png'
-        =image_tag 'ruby.png'
-        =image_tag 'jquery-logo.jpg'
+
+        %h4
+          Front End & Rails Developer for
+          =link_to "InvitedHome", "http://www.invitedHome.com"
+        %h4
+          Full Stack Developer for
+          =link_to "ScreenPrintly", "http://www.ScreenPrintly.com"
+          =link_to "View the source code", "http://www.github.com/woodall/screenprintly"
+
+    .web-camp
+      %h2 Instructor
+      =link_to "top", "#"
+      .full-row
+        %h3#web-camp Boulder Web Camp
+        = image_tag "webcamp.png"
+        %h4
+          I teach an Intro to HTML & CSS class at
+          =link_to "Boulder Web Camp", "http://www.boulderwebcamp.com"
+
 
 
   .right-bar
+    %h3 Resume
+    %ul
+      %li
+        View on
+        = link_to "LinkedIn", "http://www.linkedin.com/in/davewoodall"
+
     %h3 Education
     %ul
       %li
-        MS Finance, Corporate Finance
-        University of Denver
+        MS Finance, Corp. Finance
+        <br>University of Denver
       %li
         BS Communications, Advertising & PR
-        Liberty University
+        <br>Liberty University
       %li
         Web App Training
-        Starter League
+        <br>Starter League
 
     %h3 Software & Tools
     %ul
