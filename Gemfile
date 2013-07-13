@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'font-awesome-sass-rails'
+gem 'neat'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -17,8 +19,6 @@ group :production do
 end
 
 gem 'haml-rails', '>= 0.3.4'
-gem "neat", "~> 0.4.2"
-gem 'bourbon'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

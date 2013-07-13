@@ -90,7 +90,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    sass (3.2.1)
+    sass (3.2.9)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -119,11 +119,10 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 2.1.0.1)
-  bourbon
   font-awesome-sass-rails
   haml-rails (>= 0.3.4)
   jquery-rails
-  neat (~> 0.4.2)
+  neat
   pg
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
