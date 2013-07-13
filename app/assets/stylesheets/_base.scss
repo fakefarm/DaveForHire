@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased !important;
+
+}
+
+h1{ font-family: $sans-cond; }
+h2,
+h3,
+h4 {
+  font-family: $serif;
+  font-weight: 300;
+  color: $grey;
+}
+
+p, li, a {
+  font-family: $sans-web;
+}
+
+
+body{
+  background: url('bg.jpg');
+}
+
+.container{
+  @include outer-container();
+  max-width: 880px;
+}
+
+nav{
+  @include row();
+  background: $grey;
+  padding: 1%;
+  .logo{
+    @include span-columns(2);
+    @include clearfix();
+    img{
+      width: 100%;
+      opacity: .5;
+      margin-top: 5%;
+    }
+  }
+  ul{
+    list-style: none;
+    @include span-columns(10);
+
+    text-align: right;
+    padding: 0 1%;
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  a{
+    color: $teal;
+    font-weight: 300;
+    display: block;
+    padding: 0 2%;
+    margin: 0 15px;
+    width: 100%;
+    text-decoration: none;
+    &:hover{
+      color: $tan;
+    }
+  }
+}
+
+header{
+  background: $teal;
+  padding: 5% 1%;
+  margin-top: 2%;
+  h1{
+    color: $emerald;
+    font-size: 3em;
+    text-align: center;
+  }
+}
+
+section.content{
+  @include row();
+  background: $orange;
+
+  .left-bar{
+    padding: 1%;
+    width: 66%;
+    float: left;
+    background: $tan;
+    h4{
+      font-size: 1.2em;
+    }
+    p{
+      line-height: 20px;
+      color: $grey;
+      padding: 2% 0;
+    }
+
+  }
+
+  .right-bar{
+    width: 34%;
+    float: left;
+    padding: 3%;
+    h2{
+      color: $peach;
+      font-size: 1.7em;
+      line-height: 30px;
+      margin-bottom: 10%;
+      margin-top: 6%;
+    }
+    h3 {
+      font-size: 1.2em;
+      color: $peach;
+      padding: 2% 0;
+    }
+    p, li{
+      color: $burnt;
+    }
+    ul{
+      margin-left: 10%;
+    }
+  }
+}
+
+footer{
+  background: $grey;
+  @include clearfix();
+  @include row();
+  padding: 0 0 5% 0;
+  li{
+    list-style: none;
+  }
+  .col{
+    padding: 1%;
+    @include span-columns(3.8);
+    h3{
+      color: $light-grey;
+      font-size: 1.5em;
+    }
+    a, p, li {
+      font-family: $sans-cond;
+      color: $teal;
+      font-size: 1.1em;
+    }
+  }
+  .status{
+
+  }
+  .contact{
+
+  }
+  .social{
+
+  }
+}
