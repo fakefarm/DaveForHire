@@ -1,15 +1,32 @@
-.index-page
-  .bg=image_tag "home_page_image.jpg"
+%header
+  %h1 Part-time technical Co-founder for hire
+%section.content
+  .left-bar
+    .hero
+      = image_tag "des_biz_code.png"
+      %h1 Design, Business, Code
+    .copy
+      %h4 Ideas and action
+      %p Dear entrepreneur,
+      %p I started helping companies with design, strategy, and coding after I sold my business.
+      %p I enjoy seeing the big picture, brainstorming ideas, and delivering solutions.
+      %p I'd love to help grow your company!
+      .signature= image_tag "signature.png"
+  .right-bar
+    .me= image_tag "me.jpg"
+    %h2 More than a freelancer
+    %p Tired of dealing with multiple people to get something done?
 
-  %section.intro
-    %p Thanks for stopping by! I’m an artist, turned entrepreneur, turned developer. I can help you out in a lot of different ways. Hit me up and let’s talk!
-    .sig=image_tag "signature.png"
-
-  .action-button
+    %h3 Hire Dave! He can...
     %ul
-      %li Hire me!
-      %ul.drawer
-        %li= mail_to("dave@hireDave.me", "email", subject: "Let's talk about some work!")
-        %li= render 'shared/mention'
+      %li Sketch wireframes
+      %li Design logos
+      %li Build web apps
+      %li Analyze financials
+      %li Develop systems
+      %li Create work flows
+      %li Manage teams
+      %li Brainstorm
+      %li Talk strategy
 
-
+    %h4=link_to "See services", services_path
