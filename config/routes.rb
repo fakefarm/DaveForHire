@@ -1,20 +1,8 @@
 DaveForHire::Application.routes.draw do
 
   root :to => 'pages#index'
-  match '/experience' => 'pages#experience'
-  match '/services' => 'pages#services'
-  match '/is-this-you' => 'pages#is_this_you'
-
-  match '/art' => "pages#art"
-
-  match '/business' => "pages#business"
-
-  match '/code' => "pages#code"
-
-  match '/tshirts' => "pages#tshirts"
-
-
-  match '/portfolio' => 'main#portfolio', as: :portfolio
+  match 'services' => 'pages#services'
+  match 'sitemap' => 'pages#sitemap'
 
   resources :posts
 
