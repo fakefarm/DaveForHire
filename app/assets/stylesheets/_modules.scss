@@ -150,6 +150,7 @@
 // BLOG related module
 
 .post-title{
+  width: 100%;
   a{
     font-family: $sans-cond;
     font-size: 2em;
@@ -184,7 +185,11 @@
 .blog-body{
   background: white;
   margin: 3%;
+  padding: 3%;
   overflow: auto;
+  h2{
+    font-weight: 600;
+  }
   .signature img{
     width: 30%;
     float: right;

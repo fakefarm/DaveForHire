@@ -8,7 +8,7 @@
       %h1= @newest_post.title
     .overview
       %p
-        = @newest_post.body[0..199]
+        = markdown(@newest_post.body[0..199])
         \...
         =link_to "more", "/notes/#{@newest_post.slug}"
 
