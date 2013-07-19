@@ -1,4 +1,5 @@
 class BlogpostsController < ApplicationController
+  http_basic_authenticate_with :name => "dave", :password => "904jones", :except => [:index, :show]
 
   before_filter :latest_post
 
