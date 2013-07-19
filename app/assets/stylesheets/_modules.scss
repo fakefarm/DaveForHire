@@ -49,6 +49,7 @@
 
 .grid-row{
   @include row();
+  @include clearfix();
   img{
     @include span-columns(5.5);
     margin: 2%;
@@ -58,6 +59,25 @@
   a{ display: block; }
 
 }
+
+.caption{
+    p{
+    background: $tanner;
+    padding: 3% !important;
+    margin: 3% 4.5% 2% 2%;
+    font-style: italic;
+    font-size: .9em;
+    }
+     a{
+      color: $grey;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+}
+
 
 .grid-small{
   @include row();
@@ -74,6 +94,7 @@
   @include row();
   img{
     @include span-columns(11.2);
+
     margin: 2%;
     border: 6px solid white;
     box-shadow: 1px 1px 3px rgba(0,0,0,.5);
@@ -81,12 +102,13 @@
   a{ display: block; }
 }
 
+
+
 .services{
   h2{
     border-top: 1px dashed $light-grey;
-    padding: 4% 0;
     font-size: 3em;
-    margin: 3% 0 1% 0;
+    margin: 3% 1%;
   }
   h3{
     font-size: 2em;
@@ -95,6 +117,9 @@
 }
 
 .overview{
+  background: white;
+  padding: 3% 2% 1%;
+  margin: 0 1% 5%;
   h2 {
     font-size: 1.2em;
     border-top: none;
@@ -121,3 +146,81 @@
     }
   }
 }
+
+// BLOG related module
+
+.post-title{
+  a{
+    font-family: $sans-cond;
+    font-size: 2em;
+    color: $grey;
+    background: $tanner;
+    padding: 0 6%;
+    display: block;
+    &:hover{
+      @include transition (all 70ms ease-in-out);
+      background: $orange;
+      color: white;
+    }
+  }
+  padding: 0 0 0 1%;
+}
+
+.post-tag{
+  font-family: $sans-web;
+  font-size: .9em;
+  padding: 2%;
+  color: $grey;
+}
+
+.post-list{
+  h2{
+    padding: 0;
+    font-size: 3em;
+  }
+}
+
+
+.blog-body{
+  background: white;
+  margin: 3%;
+  overflow: auto;
+  .signature img{
+    width: 30%;
+    float: right;
+    padding: 5%;
+    margin-right: 5%;
+  }
+  code, p {
+    padding: 5%;
+  }
+}
+
+.tags{
+  margin: 3%;
+}
+
+
+.notes{
+  padding: 2%;
+  h3{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
