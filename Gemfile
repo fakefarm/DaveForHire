@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 gem 'font-awesome-sass-rails'
 gem 'neat'
+gem 'pry'
+gem 'redcarpet', '1.17.2'
+gem 'meta-tags', :require => 'meta_tags'
+
 
 
 # Bundle edge Rails instead:
