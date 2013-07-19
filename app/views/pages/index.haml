@@ -13,20 +13,8 @@
       %p I'd love to help grow your company!
       .signature= image_tag "signature.png"
   .right-bar
-    .me= image_tag "me.jpg"
-    %h2 More than a freelancer
-    %p Tired of dealing with multiple people to get something done?
+    = render 'shared/more_than_freelancer'
+    = render 'shared/he_can'
 
-    %h3 Hire Dave! He can...
-    %ul
-      %li Sketch wireframes
-      %li Design logos
-      %li Build web apps
-      %li Analyze financials
-      %li Develop systems
-      %li Create work flows
-      %li Manage teams
-      %li Brainstorm
-      %li Talk strategy
-
-    %h4=link_to "See services", services_path
+    %h3 Recent Note
+    =link_to @newest_post.title, "/blogposts/#{@newest_post.slug}"

@@ -1,0 +1,25 @@
+%br
+%header.notes
+  %h1 Thoughts on ABC's
+  %h3 (Art & Business && Code)
+%section.content
+  .left-bar
+    .hero
+      %h1= @newest_post.title
+    .overview
+      %p
+        = @newest_post.body[0..199]
+        \...
+        =link_to "more", "/notes/#{@newest_post.slug}"
+
+    .post-list
+      %table
+        - @blogposts.each do |blogpost|
+          %tr
+            %td.post-tag= blogpost.tags
+            %td.post-title=link_to blogpost.title, blogpost
+  .right-bar
+    %br
+    = render 'shared/more_than_freelancer'
+    = render 'shared/he_can'
+

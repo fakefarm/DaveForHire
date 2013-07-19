@@ -1,11 +1,13 @@
 DaveForHire::Application.routes.draw do
 
+
   root :to => 'pages#index'
   match 'services' => 'pages#services'
   match 'sitemap' => 'pages#sitemap'
   match 'contact' => 'pages#contact'
 
-  resources :posts
+  resources :blogposts, path: "/notes"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

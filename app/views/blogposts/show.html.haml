@@ -1,0 +1,27 @@
+%br
+%header
+  %h1= @blogpost.title
+%section.content
+  .left-bar
+    .blog-body
+      %p
+        = markdown(@blogpost.body)
+        .signature= image_tag "signature.png"
+
+    .tags
+      %p
+        Category:
+        = @blogpost.tags
+        \|
+        = link_to "all posts", blogposts_path
+
+
+  .right-bar
+    %h3
+      Other
+      = @blogpost.tags
+      Posts
+
+    %br
+    = render 'shared/more_than_freelancer'
+    = render 'shared/he_can'

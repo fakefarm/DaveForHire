@@ -1,9 +1,9 @@
 %header
-  %h1 More than ideas
+  %h1 Co-founders wear many hats
 %section.content.services
   .left-bar
     .hero
-      %h1 Services
+      %h1 Whatever it takes...
     .overview
       %p Let me help build your business by doing whatever needs to get it done. My primary skills are related to Design, Code, and Business Development.
       .link-section
@@ -37,9 +37,10 @@
 
     .art
       %h2 Design
-      %p I think of design as a combination of colors, texture, fonts, that work to create an emotion.
       .logos.grid-row
         %h3#logos Logos
+        %p Does your site have a logo yet? If not, we can develop one based on your company mood and style.
+
         =link_to "top", "#"
         =image_tag "bird.jpg"
         =image_tag "cats.jpg"
@@ -47,13 +48,15 @@
         =image_tag "ruby.jpg"
       .web-design.grid-row
         %h3#web-design Web design
+        %p Web design is the process of figuring out how to best communicate your content and purpose. It's an ongoing activity that changes based on customer feedback and analytics.
         =link_to "top", "#"
         =image_tag 'amb3r.jpg'
         =image_tag 'codejournal.jpg'
         =image_tag 'logan.jpg'
         =image_tag 'paperwhite.jpg'
       .grid-row
-        %h3#product-development Product Development
+        %h3#product-development Product Lines
+        %p A product line is made of complimentary items. Does the collection tell a larger story that your customers hear?
         =link_to "top", "#"
         =image_tag 'mtn.jpg'
         =image_tag 'sales.jpg'
@@ -63,59 +66,76 @@
       %h2 Business
       .grid-row
         %h3#marketing Marketing
+        %p People rarely make a decision until they feel confident and informed. Part of marketing is empowering your customers to know all that you offer.
         =link_to "top", "#"
         =image_tag 'Blast.gif'
         =image_tag 'IL.gif'
         =image_tag 'foil.gif'
         =image_tag 'SSP.gif'
+      .caption
+        %p These Design Kits and Fashion Kits were how I informed customers of the 5 different art options, and 14 different printing techniques that AMB3R offered.
       .full-row
         %h3#innovation Innovation
+        %p The more I understand what you are trying to accomplish, the more I will volunteer views that aim to differentiate from the normal way of doing things.
         =link_to "top", "#"
         =image_tag 'kids.jpg'
+      .caption
+        %p In my attempts to help Ouray sell more t-shirts, I received a patent for Flipface.
+
+      .full-row
         =image_tag 'catmathdo.jpg'
+      .caption
+        %p
+          A board game I created while teaching my son math.
+          =link_to 'cat math do', 'http://www.catmathdo.com'
+
       .full-row
         %h3#strategy Strategy
         =link_to "top", "#"
+        %p Sometimes we need to stop and meet around a white board to make sure we're all on the same page.
+      .full-row
         =image_tag 'black_box.jpg'
-        %h4 High-level discussions of how to increase profits
+      .caption
+        %p High-level discussions of how to increase profits
+      .full-row
         =image_tag 'strategy.jpg'
-        %h4 Identifying opportunities to add value
+      .caption
+        %p Identifying opportunities to add value
+      .full-row
         =image_tag 'operations.jpg'
-        %h4 Improving systems from concept to consumer
+      .caption
+        %p Improving systems from concept to consumer
 
     .code
-      %h2 Code
-      .grid-row
-        %h3#web-apps Web apps
-        =link_to "top", "#"
-
+      %h2#web-apps Code
+      =link_to "top", "#"
+      %p I am currently working with two code bases;
+      .caption
         %h4
           Front End & Rails Developer for
           =link_to "InvitedHome", "http://www.invitedHome.com"
+      .caption
         %h4
           Full Stack Developer for
           =link_to "ScreenPrintly", "http://www.ScreenPrintly.com"
-          =link_to "View the source code", "http://www.github.com/woodall/screenprintly"
+          \|
+          =link_to "(View source code)", "http://www.github.com/woodall/screenprintly"
 
     .web-camp
       %h2 Instructor
       =link_to "top", "#"
+      %p I enjoy teaching people who want to learn to code. Coding is a new literacy and my non-Computer Science degree helps me teach technical concepts, in a non-technical way.
       .full-row
         %h3#web-camp Boulder Web Camp
         = image_tag "webcamp.png"
-        %h4
+      .caption
+        %p
           I teach an Intro to HTML & CSS class at
           =link_to "Boulder Web Camp", "http://www.boulderwebcamp.com"
 
 
 
   .right-bar
-    %h3 Resume
-    %ul
-      %li
-        View on
-        = link_to "LinkedIn", "http://www.linkedin.com/in/davewoodall"
-
     %h3 Education
     %ul
       %li
@@ -155,3 +175,9 @@
       %li Marketing Director
       %li CEO
       %li COO
+
+    %h3 Resume
+    %ul
+      %li
+        View on
+        = link_to "LinkedIn", "http://www.linkedin.com/in/davewoodall", target: "_blank"
