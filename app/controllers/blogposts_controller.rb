@@ -5,7 +5,7 @@ class BlogpostsController < ApplicationController
 
   def index
     @blogposts = Blogpost.all.sort.reverse[1..-1]
-    @page_title = "Technical Co-founder for hire."
+    @page_title = "Dave Woodall | Part-time Technical Co-founder for hire."
     respond_to do |format|
       format.html
       format.json { render json: @blogposts }
