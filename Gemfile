@@ -6,7 +6,7 @@ gem 'neat'
 gem 'pry'
 gem 'redcarpet', '1.17.2'
 gem 'meta-tags', :require => 'meta_tags'
-
+gem 'newrelic_rpm'
 
 
 # Bundle edge Rails instead:
